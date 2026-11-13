@@ -132,3 +132,11 @@ SwiftUI on macOS/iOS, or Compose on Android.
 
 <!-- One line per finished step: date, step, what was built, the key thing learned. -->
 - 2026-11-02: Branch created (orphan `rebuild`, worktree `../noop-rebuild`). Next: Step 0.
+- 2026-11-12: **Step 0 done.** Installed Swift 6.4.2 via swiftly (`~/.local/share/swiftly`), plus
+  `libncurses-dev` and `unzip`. Learned: a toolchain = compiler + stdlib + Foundation + XCTest +
+  SwiftPM; swiftly manages versions like rustup. On Ubuntu 24.04, `libcurl4` is named `libcurl4t64`.
+  Next: Step 1.
+- 2026-11-12: **Step 1 done.** `Packages/WhoopProtocol` builds and `swift test` is green (1 XCTest).
+  Learned: `swift-tools-version` comment, `.target` / `.testTarget` + `dependencies`, the
+  `Sources/<Target>` and `Tests/<Target>` convention, `public` across modules, `@testable import`,
+  XCTest discovery (`test` prefix). `.build/` is gitignored. Next: Step 2 (CRC-8).
