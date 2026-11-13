@@ -1,3 +1,3 @@
-public func main() -> String{
-    return "hello world!";
+public func dummy() -> String{
+    return "hello world!"
 }
