@@ -140,3 +140,7 @@ SwiftUI on macOS/iOS, or Compose on Android.
   Learned: `swift-tools-version` comment, `.target` / `.testTarget` + `dependencies`, the
   `Sources/<Target>` and `Tests/<Target>` convention, `public` across modules, `@testable import`,
   XCTest discovery (`test` prefix). `.build/` is gitignored. Next: Step 2 (CRC-8).
+- 2026-11-16: **Step 2 done.** `crc8` (bit-by-bit, poly 0x07) in `Framing.swift`; 3 tests green
+  (`[]`→0, `"1"`→0x97, `"123456789"`→0xF4). Learned: a CRC is the remainder of polynomial division
+  over GF(2), where XOR plays the role of subtraction; `UInt8 <<` drops the high bit; the lookup table is
+  just the 8 inner steps precomputed per byte value. Next: Step 3 (CRC-32).
